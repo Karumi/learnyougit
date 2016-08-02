@@ -1,0 +1,22 @@
+{
+  "name": "git-workshopper",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/karumi/git-workshopper"
+  },
+  "license": "Apache License Version 2.0",
+  "bin": "./git-workshopper.js",
+  "dependencies": {
+    "workshopper": "1.x",
+    "workshopper-exercise": "^0.2.2",
+    "workshopper-wrappedexec": "^0.1.1",
+    "workshopper-boilerplate": "0.0.1",
+    "hyperquest": "0.1.x",
+    "hapi": "6.x.x",
+    "colors-tmpl": "^1.0.0",
+    "through2": "^0.4.1",
+    "bl": "^0.8.0"
+  }
+}
+
