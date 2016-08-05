@@ -2,7 +2,10 @@
 
 ## Task
 
-Create a new Git repository
+Create a new Git repository with the command
+```
+git init
+```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
@@ -10,18 +13,20 @@ Create a new Git repository
 
 To start using Git you first need to create a new repository.
 
-A repository is nothing but a filesystem where you can keep track of all the changes performed on it.
+A repository is nothing but a filesystem where, besides storing all your data, you can keep track of all the changes performed on it.
+
+There are several ways of creating a repository, we will use the simplest one though, which is creating it empty with the command `git init`
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
 ## Internals
 
-Internally, Git creates a folder where it stores all the information it needs with:
-* All the files tracked in the filesystem (including all their versions)
-* A tree-like data structure pointing to snapshots of the filesystem in a specific moment in time.
-* Meta information such as descriptions, authors, etc.
+When we run `git init`, Git creates a folder in your current directory called `.git`. This folder stores, among other things:
+* All the files contents tracked by Git (including all the different versions of the same file)
+* A tree-like data structure representing folders at specific points in time.
+* Metadata such as descriptions, authors, file permissions, etc.
 
-You can take a look to all the things Git created for you, we will explain every folder and file in detail in the following exercises:
+You can take a look to all the things Git created for you, I will explain every folder and file in detail in the following exercises:
 ```
 .git
 ├── HEAD

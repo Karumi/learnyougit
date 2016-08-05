@@ -17,7 +17,7 @@ exercise.addProcessor(function (mode, callback) {
 });
 
 function printError(str) {
-    console.log("\n " + chalk.red("» ERROR") + ": You have not created a Git repository in your current directory");
+    console.log("\n " + chalk.red("››› ERROR") + ": You have not created a Git repository in your current directory");
 }
 
 exercise.hideSolutions = true;
