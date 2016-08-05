@@ -4,7 +4,13 @@ const chalk = require('chalk')
 
 exercise.addProcessor(function (mode, callback) {
     Git.Repository.open('.')
-    .then(() => {
+    .then((repository) => {
+        return repository.index()
+    }).then((index) => {
+        if (index.entryCount() < 0) {
+            throw new Error('There are no tracked files in your repository')
+        }
+
         process.nextTick(function () {
             callback(null, true)
         });
@@ -17,7 +23,7 @@ exercise.addProcessor(function (mode, callback) {
 });
 
 function printError(str) {
-    console.log("\n " + chalk.red("››› ERROR") + ": You have not created a Git repository in your current directory");
+    console.log("\n " + chalk.red("» ERROR") + ": There are no tracked files in your repository");
 }
 
 exercise.hideSolutions = true;
