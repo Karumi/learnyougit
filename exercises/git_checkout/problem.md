@@ -4,7 +4,7 @@
 
 Move to another branch using
 ```
-git checkout {branch-name}
+git checkout {branch-name|commit}
 ```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
