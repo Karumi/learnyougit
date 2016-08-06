@@ -13,7 +13,7 @@ git checkout {branch-name|commit}
 
 Now that we know what branches are, we probably want to start moving between them. That's what `git checkout` is for. Try to move to your newly created branch.
 
-Git will always store a reference to your working branch called `HEAD`. When you create a new repository, `HEAD` will be pointing to the master branch. Doing a checkout only means updating that pointer to reference other branch.
+Git will always store a reference to your working branch called `HEAD`. When you create a new repository, `HEAD` will be pointing to the master branch. Doing a checkout to a branch only means updating that pointer to reference that branch.
 
 ```
                      +------+
@@ -88,6 +88,33 @@ Git will always store a reference to your working branch called `HEAD`. When you
 
 From now on, all the commits you create will change `BRANCH #2` history instead of `BRANCH #1`.
 
+Git also lets you move to specific commits by using their hash (or partial hash if there is no conflict with other hashes), e.g. `git checkout 871e25a9`. Git calls this situation to be in a `detached HEAD` state, meaning, your HEAD isn't pointing to a branch but a commit, and therefore, it won't update any branch when creating new commits.
+
+{green}DETACHED HEAD STATE{/green}
+```
++-----------+        +------+
+| BRANCH #1 |        | HEAD |
++-----+-----+        +---+--+
+      |                  |
+      V                  V
++-----------+      +-----------+
++ COMMIT #1 |<-----+ COMMIT #2 |
++-----------+      +-----------+
+```
+{green}BEFORE CREATING A COMMIT{/green}
+{green}- - - - - - - - - - - - - - - - - - - - - - - - - - - -{/green}
+{green}AFTER CREATING A COMMIT{/green}
+```
++-----------+                           +------+
+| BRANCH #1 |                           | HEAD |
++-----+-----+                           +---+--+
+      |                                     |
+      V                                     V
++-----------+      +-----------+      +-----------+
+| COMMIT #1 |<-----+ COMMIT #2 |<-----+ COMMIT #3 |
++-----------+      +-----------+      +-----------+
+```
+
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
 ## Internals
@@ -114,4 +141,10 @@ You can print the contents of the `HEAD` file to see that it only contains the n
   ref: refs/heads/master
 ```
 
+If your HEAD is pointing to a commit, it will contain its hash instead:
+```
+> cat .git/HEAD
+
+  d57d319c4057b02c8095c2e7c7daedc9c6194f93
+```
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
