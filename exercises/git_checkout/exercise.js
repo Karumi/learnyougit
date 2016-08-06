@@ -6,12 +6,10 @@ const CommonGit = require('../../common-git')
 exercise.addProcessor(function (mode, callback) {
     Git.Repository.open('.')
     .then((repository) => {
-        return repository.getReferenceNames(Git.Reference.TYPE.LISTALL)
-    }).then((referenceNames) => {
-        return referenceNames.filter(CommonGit.isNotMasterBranch)
-    }).then((referenceNames) => {
-        if (referenceNames <= 0) {
-            throw new Error('There are no new branches in your repository')
+        return repository.head()
+    }).then((head) => {
+        if (CommonGit.isMasterBranch(head.name())) {
+            throw new Error('You are still in the master branch')
         }
 
         process.nextTick(function () {
