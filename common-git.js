@@ -1,5 +1,9 @@
 function CommonGit() {}
 
+CommonGit.isInRemote = function(reference) {
+    return reference.isRemote() === 1
+}
+
 CommonGit.isTag = function(reference) {
     return reference.isTag() === 1
 }

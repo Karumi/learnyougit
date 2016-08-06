@@ -5,19 +5,19 @@ const CommonGit = require('../../common-git')
 
 exercise.addProcessor(function (mode, callback) {
     Git.Repository.open('.')
-    .then((repository) => {
+    .then(repository => {
         return repository.getReferences(Git.Reference.TYPE.LISTALL)
-    }).then((references) => {
+    }).then(references => {
         return references.filter(CommonGit.isTag)
-    }).then((references) => {
-        if (references <= 0) {
+    }).then(references => {
+        if (references.length === 0) {
             throw new Error('There are no tags in your repository')
         }
 
         process.nextTick(function () {
             callback(null, true)
         });
-    }).catch((error) => {
+    }).catch(error => {
         process.nextTick(function () {
             Common.logError(error.message)
             callback(null, false)

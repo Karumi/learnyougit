@@ -4,9 +4,9 @@ const Common = require('../../common')
 
 exercise.addProcessor(function (mode, callback) {
     Git.Repository.open('.')
-    .then((repository) => {
+    .then(repository => {
         return repository.getHeadCommit()
-    }).then((commit) => {
+    }).then(commit => {
         if (commit === null) {
             throw new Error('You have not created any commit yet')
         }
@@ -14,7 +14,7 @@ exercise.addProcessor(function (mode, callback) {
         process.nextTick(function () {
             callback(null, true)
         });
-    }).catch((error) => {
+    }).catch(error => {
         process.nextTick(function () {
             Common.logError(error.message)
             callback(null, false)

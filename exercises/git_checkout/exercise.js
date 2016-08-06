@@ -5,9 +5,9 @@ const CommonGit = require('../../common-git')
 
 exercise.addProcessor(function (mode, callback) {
     Git.Repository.open('.')
-    .then((repository) => {
+    .then(repository => {
         return repository.head()
-    }).then((head) => {
+    }).then(head => {
         if (CommonGit.isMasterBranch(head.name())) {
             throw new Error('You are still in the master branch')
         }
@@ -15,7 +15,7 @@ exercise.addProcessor(function (mode, callback) {
         process.nextTick(function () {
             callback(null, true)
         });
-    }).catch((error) => {
+    }).catch(error => {
         process.nextTick(function () {
             Common.logError(error.message)
             callback(null, false)

@@ -5,19 +5,19 @@ const CommonGit = require('../../common-git')
 
 exercise.addProcessor(function (mode, callback) {
     Git.Repository.open('.')
-    .then((repository) => {
+    .then(repository => {
         return repository.getReferenceNames(Git.Reference.TYPE.LISTALL)
-    }).then((referenceNames) => {
+    }).then(referenceNames => {
         return referenceNames.filter(CommonGit.isNotMasterBranch)
-    }).then((referenceNames) => {
-        if (referenceNames <= 0) {
+    }).then(referenceNames => {
+        if (referenceNames.length === 0) {
             throw new Error('There are no new branches in your repository')
         }
 
         process.nextTick(function () {
             callback(null, true)
         });
-    }).catch((error) => {
+    }).catch(error => {
         process.nextTick(function () {
             Common.logError(error.message)
             callback(null, false)
