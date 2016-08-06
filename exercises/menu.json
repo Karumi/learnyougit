@@ -1,5 +1,15 @@
 [
-    "GIT_INIT",
-    "GIT_ADD",
-    "GIT_COMMIT"
+    "GIT INIT",
+    "GIT ADD",
+    "GIT COMMIT",
+    "GIT BRANCH",
+    "GIT CHECKOUT",
+    "GIT TAG",
+    "GIT REMOTE",
+    "GIT FETCH",
+    "GIT RESET",
+    "GIT MERGE",
+    "GIT REBASE",
+    "GIT CHERRY-PICK",
+    "GIT STASH"
 ]
