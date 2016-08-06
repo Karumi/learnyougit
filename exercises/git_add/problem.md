@@ -46,6 +46,7 @@ The index file is just a description of what is going to be saved in the next sn
 
 ```
 > git ls-files --stage
+
   100644 a19abfea0… 0 file.txt
 ```
 
@@ -53,6 +54,7 @@ There is also a new `objects` directory. All Git objects follow the same naming 
 
 ```
 > git show a19abfea0
+
   Hello git-workshopper
 ```
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

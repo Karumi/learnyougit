@@ -5,10 +5,10 @@ const Common = require('../../common')
 exercise.addProcessor(function (mode, callback) {
     Git.Repository.open('.')
     .then((repository) => {
-        return repository.index()
-    }).then((index) => {
-        if (index.entryCount() <= 0) {
-            throw new Error('There are no tracked files in your repository')
+        return repository.getHeadCommit()
+    }).then((commit) => {
+        if (commit === null) {
+            throw new Error('You have not created any commit yet')
         }
 
         process.nextTick(function () {

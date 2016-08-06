@@ -1,6 +1,6 @@
 const exercise = require('workshopper-exercise')()
 const Git = require('nodegit')
-const chalk = require('chalk')
+const Common = require('../../common')
 
 exercise.addProcessor(function (mode, callback) {
     Git.Repository.open('.')
@@ -10,15 +10,11 @@ exercise.addProcessor(function (mode, callback) {
         });
     }).catch(() => {
         process.nextTick(function () {
-            printError()
+            Common.logError('You have not created a Git repository in your current directory')
             callback(null, false)
         });
     })
 });
-
-function printError(str) {
-    console.log("\n " + chalk.red("» ERROR") + ": You have not created a Git repository in your current directory");
-}
 
 exercise.hideSolutions = true;
 exercise.requireSubmission = false;
