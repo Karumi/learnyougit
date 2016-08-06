@@ -30,17 +30,16 @@ Git also creates all the metadata of the tracked file such as:
 
 You will notice your Git folder has changed. The two main differences are the index file and the objects folder:
 
-```
-.git
-├── HEAD
-├── index
-├── objects
-│   └── a1
-│       └── 9abfea0f…
-└── refs
-    ├── heads
-    └── tags
-```
+    {grey}
+    .git
+    ├── HEAD
+    ├── {/grey}{green}index{/green}{grey}
+    ├── {/grey}{green}objects{/green}{grey}
+    │   └── {/grey}{green}a1{/green}{grey}
+    |       └── {/grey}{green}9abfea0f…{/green}{grey}
+    ├── refs
+    │   ├── heads
+    └   └── tags{/grey}
 
 The index file is just a description of what is going to be saved in the next snapshot. This is usually called the `index` or the `staging` area. It contains all the metadata for the files that have been added. You can take a look to the your index with the following command:
 

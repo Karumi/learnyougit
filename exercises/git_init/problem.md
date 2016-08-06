@@ -27,13 +27,13 @@ When we run `git init`, Git creates a folder in your current directory called `.
 * Metadata such as descriptions, authors, file permissions, etc.
 
 You can take a look to all the things Git created for you, I will explain every folder and file in detail in the following exercises:
-```
-.git
-├── HEAD
-├── objects
-└── refs
-    ├── heads
-    └── tags
-```
+
+    {grey}
+    .git
+    ├── HEAD
+    ├── objects
+    └── refs
+        ├── heads
+        └── tags{/grey}
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

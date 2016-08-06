@@ -15,6 +15,19 @@ Now that you have, at least, one file ready to be tracked, we can tell Git to cr
 
 If we execute it with no additional parameters Git will open a text editor asking you for a message to describe what you are about to store. You can also tell Git what your message is directly from command line with the parameter `-m {message}`.
 
+You can create as many commits as you want, every commit will always keep a reference to the previous one, its parent. In this way, we can know which snapshots are older and which are newer:
+
+```
+ +-----------+      +-----------+      +-----------+
+ | COMMIT #1 |<-----+ COMMIT #2 |<-----+ COMMIT #3 |
+ +-----+-----+      +-----+-----+      +-----+-----+
+       |                  |                  |
+       V                  V                  V
++-------------+    +-------------+    +-------------+
+| SNAPSHOT #1 |    | SNAPSHOT #2 |    | SNAPSHOT #3 |
++-------------+    +-------------+    +-------------+
+```
+
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
 ## Internals
@@ -23,21 +36,20 @@ To store the tracked files, Git builds `tree` and `commit` objects. Tree objects
 
 If we take a look at your Git directory you can see there are more objects now. These are the tree and commit objects you just created:
 
-```
-.git
-├── HEAD
-├── index
-├── objects
-│   ├── 18
-│   │   └── 611beb72…
-│   ├── 87
-│   │   └── 1e25a902…
-│   └── a1
-│       └── 9abfea0f…
-└── refs
-    ├── heads
-    └── tags
-```
+    {grey}
+    .git
+    ├── HEAD
+    ├── index
+    ├── objects
+    │   ├── {/grey}{green}18{/green}{grey}
+    │   │   └── {/grey}{green}611beb72…{/green}{grey}
+    │   ├── {/grey}{green}87{/green}{grey}
+    │   │   └── {/grey}{green}1e25a902…{/green}{grey}
+    │   └── a1
+    |       └── 9abfea0f…
+    ├── refs
+    │   ├── heads
+    └   └── tags{/grey}
 
 You can take a look at the tree object by executing the following command:
 
@@ -60,6 +72,24 @@ Commit objects can be inspected as follows:
   committer Sergio Gutierrez <sergio@gokarumi.com> 1458666886 +0100
 
     First commit
+```
+
+When we create more and more commits we start creating a linear history of your files. Keep in mind that Git will reuse tree and blob objects when possible. If file contents don't change, a new tree object can point to older blobs like in the following diagram:
+
+```
+ +-----------+      +-----------+      +-----------+
+ | COMMIT #1 |<-----+ COMMIT #2 |<-----+ COMMIT #3 |
+ +-----+-----+      +-----+-----+      +-----+-----+
+       |                  |                  |
+       V                  V                  V
+  +---------+        +---------+        +---------+
+  | TREE #1 |        | TREE #2 |        | TREE #3 |
+  +----+----+        +----+----+        +----+----+
+       |                  |                  |
+       V                  V                  |
+  +---------+        +---------+             |
+  | BLOB #1 |        | BLOB #2 |<------------+
+  +---------+        +---------+
 ```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
