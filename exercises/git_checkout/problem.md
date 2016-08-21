@@ -11,9 +11,9 @@ git checkout {branch-name|commit}
 
 ## Description
 
-Now that we know what branches are, we probably want to start moving between them. That's what `git checkout` is for. Try to move to your newly created branch.
+Now that we know what branches are, we probably want to start moving between them. That's what `git checkout` is for. Try to move to your newly created branch adding its name to the end of the command: `git checkout {branch-name}`.
 
-Git will always store a reference to your working branch called `HEAD`. When you create a new repository, `HEAD` will be pointing to the master branch. Doing a checkout to a branch only means updating that pointer to reference that branch.
+Git will always store a reference to your working branch called `HEAD`. When you create a new repository, `HEAD` will be pointing to the master branch. Doing a checkout to a branch only means updating that pointer to reference the specified branch.
 
 ```
                      +------+
