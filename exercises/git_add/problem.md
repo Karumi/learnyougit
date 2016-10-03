@@ -41,12 +41,13 @@ You will notice your Git folder has changed. The two main differences are the in
     │   ├── heads
     └   └── tags{/grey}
 
-The index file is just a description of what is going to be saved in the next snapshot. This is usually called the `index` or the `staging` area. It contains all the metadata for the files that have been added. You can take a look to the your index with the following command:
+The index file is just a description of what is going to be saved in the next snapshot. This is usually called the `index` or the `staging` area. It contains all the metadata for the files that have been added. You can take a look to your index with the following command:
 
 ```
 > git ls-files --stage
 
   100644 a19abfea0… 0 file.txt
+
 ```
 
 There is also a new `objects` directory. All Git objects follow the same naming format which is the SHA1 of its contents, 40 digits (2 in the folder name + 38 in the file name). In this case, the object is the blob object with the contents of the file we added to the index. You can see the data stored in a blob with the following command:

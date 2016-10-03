@@ -71,6 +71,6 @@ There is an easier way to see all the information stored for a remote:
       master pushes to master (up to date)
 ```
 
-Besides the URLs used to download and upload information, Git also links local branches with remote ones. It does that so that remote-related calls like `git pull` and `git push` (that we will see in later lessons) can be automatically done without specifying which remote branches you are updating.
+Besides the URLs used to download and upload information, Git also links local branches with remote ones. It does that so that remote-related calls like `git pull` and `git push` (that we will see in later lessons) can be automatically executed without specifying which remote branches are being updated.
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

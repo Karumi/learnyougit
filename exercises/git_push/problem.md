@@ -20,19 +20,19 @@ To fork a repository you can follow the official GitHub guide: `https://help.git
 
 There are several options to configure what changes you are going to upload but in general, you usually want to send a single branch. This can be done with the command `git push {remote-name} {branch-name}`. Try it now, once it finishes, you will see your branch and all its commits directly from GitHub. By default, Git will use the "smart" protocol to upload only the things that are not already uploaded.
 
-Is this it? That's everything you need to know to push things? Well... it's not. If you are working completely alone in a project you probably won't need anything else, but, if you work with other people you will probably end up having conflicts with their work. What happens if Alice and Bob are working in the same branch? Imagine Alice has pushed her changes to server and right after that, Bob wants to do the same. Git will warn him that it's not possible with a message like:
+Is this it? That's everything you need to know to push things? Well... it's not. If you are working completely alone in a project you probably won't need anything else, but, if you work with other people you will probably end up having conflicts with their work. What happens if Alice and Bob are working in the same branch and in the same file? Imagine Alice has pushed her changes to server and right after that, Bob wants to do the same. Git will warn him that it's not possible with a message like:
 
 ```
-To git@github.com:Karumi/Dexter.git
+To git@github.com:Karumi/learnyougit.git
  ! [rejected]        master -> master (non-fast-forward)
-error: failed to push some refs to 'git@github.com:Karumi/Dexter.git'
+error: failed to push some refs to 'git@github.com:Karumi/learnyougit.git'
 hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
 hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-In this situation, Bob will need to solve the conflicts in his computer (we will see how to do this in the following lesson) before retrying the push operation. There is another possibility, Bob can discard Alice work and upload only his changes with the `-f` or `--force` option. This option should be used carefully and only when you know that the commits you are discarding can be removed safely.
+In this situation, Bob will need to solve the conflicts in his computer (we will see how to do this in the following lesson) before retrying the push operation. There is another possibility, Bob can discard Alice work and upload only his changes with the `-f` or `--force` option. This option should be used carefully and only when you know that the commits you are discarding can be safely removed.
 
 In the following lessons we will learn how to solve this kind of conflicts so that you don't have to discard others work.
 
@@ -76,7 +76,7 @@ When you push a branch, Git will compare which commits are already present in th
                                     | LOCAL BRANCH |
                                     +--------------+
 ```
-* Your local branch doesn't share all its history with the remote branch. That'd mean that your history diverges at some point from the one store in server. Git will ask you to either solve the issue locally, respecting the server history, or to forget server's history and use yours instead.
+* Your local branch doesn't share all its history with the remote branch. That'd mean that your history diverges at some point from the one stored in server. Git will ask you to either solve the issue locally, respecting the server history, or to forget server's history and use yours instead.
 
 ```
                  +---------------+

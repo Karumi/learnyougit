@@ -4,13 +4,21 @@ const Common = require('../../common')
 
 exercise.addProcessor(function (mode, callback) {
     Git.Repository.open('.')
-    .then(() => {
+    .then(repository => {
+        return repository.getReferenceCommit('root-branch')
+    }).then(commit => {
+        return commit.getParents()
+    }).then(parents => {
+        if (parents.length < 2) {
+            throw new Error('The current commit only has one parent. It should have two after the merge!')
+        }
+
         process.nextTick(function () {
             callback(null, true)
         });
-    }).catch(() => {
+    }).catch(error => {
         process.nextTick(function () {
-            Common.logError('You have not created a Git repository in your current directory')
+            Common.logError(error.message)
             callback(null, false)
         });
     })

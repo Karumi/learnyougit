@@ -15,7 +15,7 @@ To start using Git you first need to create a new repository.
 
 A repository is nothing but a filesystem where, besides storing all your data, you can keep track of all the changes performed on it.
 
-There are several ways of creating a repository, we will use the simplest one though, which is creating it empty with the command `git init`
+There are several ways of creating a repository, we will use the simplest one though, which is to create it with the command `git init`
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
@@ -26,7 +26,7 @@ When we run `git init`, Git creates a folder in your current directory called `.
 * A tree-like data structure representing folders at specific points in time.
 * Metadata such as descriptions, authors, file permissions, etc.
 
-You can take a look to all the things Git created for you, I will explain every folder and file in detail in the following exercises:
+You can take a look to all the things Git created for you, we will see what most of the folders and files are in detail in the following exercises:
 
     {grey}
     .git

@@ -24,7 +24,7 @@ We need to make a stop in the road to explain one of the most useful tools in Gi
 
 There is a lot to say about `git reset`, if you feel like learning how does it work go directly to the `Internals` section. If not, here are some useful examples of how git reset can be used.
 
-`git reset HEAD` Unstages everything.
+`git reset HEAD` "Unstages" changes. It can be seen as the opposite operation of `git add`.
 `git reset --hard HEAD` Cleans up all your current work, staged or not (Be careful, this means you won't be able to recover your changes).
 `git reset --soft HEAD~` Moves your branch to the previous commit. All the changes in the current commit will be "moved" to the staging area.
 `git reset --hard {commit|branch}` Moves your current branch to point to the specified commit or branch. Cleans your current changes.

@@ -88,9 +88,8 @@ Git will always store a reference to your working branch called `HEAD`. When you
 
 From now on, all the commits you create will change `BRANCH #2` history instead of `BRANCH #1`.
 
-Git also lets you move to specific commits by using their hash (or partial hash if there is no conflict with other hashes), e.g. `git checkout 871e25a9`. Git calls this situation to be in a `detached HEAD` state, meaning, your HEAD isn't pointing to a branch but a commit, and therefore, it won't update any branch when creating new commits.
+Git also lets you move to specific commits by using their hash (or partial hash if there is no conflict with other hashes), e.g. `git checkout 871e25a9`. Git calls this situation to be in a `detached HEAD` state, meaning, your HEAD isn't pointing to a branch but a commit. If Git finds itself in this situation, it won't update any branch when creating new commits.
 
-{green}DETACHED HEAD STATE{/green}
 ```
 +-----------+        +------+
 | BRANCH #1 |        | HEAD |

@@ -5,6 +5,7 @@
     "GIT BRANCH",
     "GIT CHECKOUT",
     "GIT RESET",
+    "GIT STATUS AND GIT DIFF",
     "GIT TAG",
     "GIT FETCH",
     "GIT PUSH",
