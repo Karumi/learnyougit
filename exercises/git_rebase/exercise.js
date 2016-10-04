@@ -21,7 +21,7 @@ exercise.addProcessor(function (mode, callback) {
     }).then(() => {
         return _repository.getReferenceCommit('rebase-lesson/onto-branch')
     }).then(commit => {
-        if (commit != _ancestorCommit) {
+        if (commit.sha() != _ancestorCommit.sha()) {
             throw new Error('Your parent commit is not in rebase-lesson/onto-branch')
         }
 

@@ -2,7 +2,7 @@
 
 ## Task
 
-Rebase two branches:
+Rebase two branches and solve the conflict by adding a new different line:
 ```
 git checkout rebase-lesson/base-branch
 git rebase rebase-lesson/onto-branch
