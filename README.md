@@ -24,5 +24,5 @@ License
     All rights not explicitly granted in the MIT license are reserved. 
     See the included LICENSE file for more details.
 
-[screenshot]: ...
+[screenshot]: art/screenshot.png
 [karumilogo]: https://cloud.githubusercontent.com/assets/858090/11626547/e5a1dc66-9ce3-11e5-908d-537e07e82090.png
