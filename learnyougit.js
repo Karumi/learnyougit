@@ -8,9 +8,9 @@ function fpath (f) {
 }
 
 workshopper({
-    name        : 'git-workshopper',
-    title       : 'Git Workshopper',
-    subtitle    : 'Learn how to use Git',
+    name        : 'learnyougit',
+    title       : 'Learn you git',
+    subtitle    : 'Git interactive workshop',
     appDir      : __dirname,
     menuItems   : [],
     exerciseDir : fpath('./exercises/'),

@@ -10,7 +10,5 @@
     "GIT FETCH",
     "GIT PUSH",
     "GIT MERGE",
-    "GIT REBASE",
-    "GIT CHERRY-PICK",
-    "GIT STASH"
+    "GIT REBASE"
 ]

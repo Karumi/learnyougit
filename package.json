@@ -1,12 +1,12 @@
 {
-  "name": "git-workshopper",
+  "name": "learnyougit",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/karumi/git-workshopper"
+    "url": "git://github.com/karumi/learnyougit"
   },
   "license": "Apache License Version 2.0",
-  "bin": "./git-workshopper.js",
+  "bin": "./learnyougit.js",
   "dependencies": {
     "workshopper": "1.x",
     "workshopper-exercise": "^0.2.2",
