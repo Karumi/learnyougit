@@ -1,23 +1,15 @@
 {
   "name": "learnyougit",
-  "version": "1.0.0",
+  "version": "0.0.1-SNAPSHOT",
   "repository": {
     "type": "git",
     "url": "git://github.com/karumi/learnyougit"
   },
-  "license": "Apache License Version 2.0",
+  "license": "Apache-2.0",
   "bin": "./learnyougit.js",
   "dependencies": {
-    "workshopper": "1.x",
-    "workshopper-exercise": "^0.2.2",
-    "workshopper-wrappedexec": "^0.1.1",
-    "workshopper-boilerplate": "0.0.1",
-    "hyperquest": "0.1.x",
-    "hapi": "6.x.x",
-    "colors-tmpl": "^1.0.0",
-    "through2": "^0.4.1",
-    "bl": "^0.8.0",
-    "nodegit": "0.14.1",
+    "workshopper": "2.7.0",
+    "nodegit": "0.16.0",
     "chalk": "1.1.3"
   }
 }

@@ -1,7 +1,25 @@
-![Karumi logo][karumilogo] Learn You A Git For Serious Amusement !
+![Karumi logo][karumilogo] Learn You A Git For Serious Amusement!
 ======
 
+Learn how to use Git in an interactive workshop right from your favourite console. No previous knowledge of Git or other version control system is needed, just a console, `npm` and your hands!
+
 ![Screenshot][screenshot]
+
+Usage
+-----
+
+1. Install node from the [official page](https://nodejs.org/en/download/)
+2. `npm install learnyougit -g`
+3. `learnyougit`
+
+Once inside the workshop you will be able to navigate through all the lessons and validate your knowledge!
+
+Libraries
+---------
+
+* [workshopper](https://github.com/workshopper/workshopper-adventure)
+* [nodegit](https://github.com/nodegit/nodegit)
+* [chalk](https://github.com/chalk/chalk)
 
 License
 -------
@@ -20,13 +38,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-```
-
-```
-Workshopper-Adventure is Copyright (c) 2015 Martin Heidegger @martinheidegger
-and licenced under the MIT licence.
-All rights not explicitly granted in the MIT license are reserved.
-See the included LICENSE file for more details.
 ```
 
 [screenshot]: art/screenshot.png
