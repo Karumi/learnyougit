@@ -2,7 +2,7 @@
 
 ## Description
 
-In a previous lesson we learned how to upload your changes and we talked about how your work can have conflicts with others work. The main tool that lets you solve this kind of situations is `git merge`. In essence, the merge command just unifies two branches history into one:
+In a previous lesson, we learnt how to upload your changes and we talked about how your work can have conflicts with others work. The main tool that lets you solve this kind of situations is `git merge`. In essence, the merge command just unifies two branches history into one:
 
 ```
                      +------+
@@ -58,7 +58,7 @@ In a previous lesson we learned how to upload your changes and we talked about h
 
 One important thing to notice is that we only modify the branch we are in. The branch we are merging from stays unmodified. In the diagram above we can see how Git creates a new commit with two parents called a merge commit. This merge commit contains a mix of the files of the two branches.
 
-The merge process we've seen is a rather complex one. There are other situations where Git can apply a more simple solution. Imagine we now want to merge `BRANCH #1` into `BRANCH #2`, that means, we want `BRANCH #2` to share history with `BRANCH #1`. In that case, by default, Git will not create a new commit but will just move forwards the commit `BRANCH #2` is pointing to.
+The merge process we've seen is a rather complex one. There are other situations where Git can apply a more simple solution. Imagine we now want to merge `BRANCH #1` into `BRANCH #2`, that means, we want `BRANCH #2` to share history with `BRANCH #1`. In that case, by default, Git will not create a new commit but will just move forwards `BRANCH #2`.
 
 ```
                                       +-----------+
@@ -129,7 +129,7 @@ Something else I wrote right now
 >>>>>>> master
 ```
 
-The top part is what your current branch has, in this case, the sentence `Something I wrote just now`. The bottom part is the contents of the branch you are merging to. Once you decide which version you like more (you can even create a mix of the two), remove the conflict marks and add the file to your index with `git add`. Remember Git just suspended the merge task? When you finish solving conflicts and marking them as resolved (by adding them to the staging area), just commit your merge changes with `git commit`. Git will know that your commit has been built from a merge and will automatically set a message for you.
+The top part is what your current branch has, in this case, the sentence `Something I wrote just now`. The bottom part is the contents of the branch you are merging to. Once you decide which version you like more (you can even create a mix of the two), remove the conflict marks and add the file to your index with `git add`. Remember Git just suspended the merge task? When you finish solving conflicts just commit your changes with `git commit`. Git will know that your commit has been built from a merge and will automatically set a message for you.
 
 Congratulations, now you know how to collaborate with others more efficiently! There is another way to mix your work with others and that is `git rebase`, we will see how it works in our next lesson.
 
@@ -150,12 +150,14 @@ How the merge tool works can be summarized in the following rules:
 
 Merge two branches where fast-forward can be applied:
 ```
+git checkout merge-lesson/fast-foward-branch # To create a local branch
 git checkout merge-lesson/base-branch
 git merge merge-lesson/fast-forward-branch
 ```
 
 Merge two branches with conflicts and solve them taking all the changes from the conflicts-branch:
 ```
+git checkout merge-lesson/conflicts-branch # To create a local branch
 git checkout merge-lesson/base-branch
 git merge merge-lesson/conflicts-branch
 ```

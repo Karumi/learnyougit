@@ -4,10 +4,10 @@
 
 We already reviewed how to use the `merge` tool, it's now time to learn how to use its companion, the `rebase` command! The main goal of `git rebase` is to unify branches keeping a linear history, that means that Git won't create commits with two parents. Git users often find this desirable because, in this way, it's easier to navigate through your commits history to find bugs, revert changes and so.
 
-To start using rebase we first need to specify a branch where we want to rebase ours. This is done with the syntax `git rebase {base-branch}`. As with other Git operations, we can also use commit hashes or relative commits.
+To start using rebase, we first need to specify a branch where we want to rebase ours. This is done with the syntax `git rebase {base-branch}`. As with other Git operations, we can also use commit hashes or relative commits.
 
 How does Git keeps a linear history? It basically "replays" all the commits that are in your current branch (but are not in your base branch) on top of the tip of the base branch. The process can be separated in the following steps:
-* Find the most recent commit that is shared by both branches, the current one and the branch you are rebasing onto.
+* Find the most recent commit that is shared by both branches, the current one and the branch you are rebasing into.
 * Starting from that shared commit, save all commits present in your current branch.
 * Reset your current branch to the most recent commit in the base branch.
 * Replay every saved commit in order.
@@ -107,6 +107,7 @@ Once you have finished editing what to do with every commit save the file and Gi
 
 Rebase two branches and solve the conflict by adding a new different line:
 ```
+git checkout rebase-lesson/onto-branch # To create a local branch
 git checkout rebase-lesson/base-branch
 git rebase rebase-lesson/onto-branch
 ```

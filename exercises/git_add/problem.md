@@ -4,9 +4,9 @@
 
 Right now your repository isn't tracking anything at all. Let's change that by adding a single file.
 
-In order to do that you must first create a file. Use your favorite editor or the command `touch {filename}` to create an empty file.
+In order to do that, you must first create a file. Use your favorite editor or the command `touch {filename}` to create an empty file.
 
-Now we need to tell Git that we want to add that file to our repository by typing `git add {filename}` and voilà! Git now recognizes the file and has added it to its tracking system.
+Now we need to tell Git that we want to add that file to our repository by typing `git add {filename}` and, voilà! Git now recognizes the file and has added it to its tracking system.
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
@@ -32,7 +32,7 @@ You will notice your Git folder has changed. The two main differences are the in
     │   ├── heads
     └   └── tags{/grey}
 
-The index file is just a description of what is going to be saved in the next snapshot. This is usually called the `index` or the `staging` area. It contains all the metadata for the files that have been added. You can take a look to your index with the following command:
+The index file is just a description of what is going to be saved in the next snapshot. This is usually called the `index` or the `staging area`. It contains all metadata for the files that have been added. You can take a look to your index with the following command:
 
 ```
 > git ls-files --stage

@@ -4,9 +4,9 @@
 
 Now that you have, at least, one file ready to be tracked, we can tell Git to create a snapshot. This means that we are going to store the state of all tracked files at this moment. To do that we use the command `git commit`.
 
-If we execute it with no additional parameters Git will open a text editor asking you for a message to describe what you are about to store. You can also tell Git what your message is directly from command line with the parameter `-m {message}`.
+If we execute it with no additional parameters, Git will open a text editor asking you for a message to describe what you are about to store. You can also tell Git what your message is directly from command line with the parameter `-m {message}`.
 
-You can create as many commits as you want, every commit will always keep a reference to the previous one, its parent. In this way, we can know which snapshots are older and which are newer:
+You can create as many commits as you wish. Every commit will always keep a reference to the previous one, its parent. In this way, we can know which snapshots are older and which are newer:
 
 ```
  +-----------+      +-----------+      +-----------+
@@ -23,7 +23,7 @@ You can create as many commits as you want, every commit will always keep a refe
 
 ## In-depth
 
-To store the tracked files, Git builds `tree` and `commit` objects. Tree objects are a like directories, they store names, permissions and pointers to other objects, be it blobs or other trees. In the other hand, commit objects store a pointer to a tree and all the metadata related to the snapshot, that means, committer name, creation timestamp, message, etc.
+To store the tracked files, Git builds `tree` and `commit` objects. Tree objects are like directories, they store names, permissions and pointers to other objects, be it blobs or other trees. In the other hand, commit objects store a pointer to a tree and all the metadata related to the snapshot, that means, committer name, creation timestamp, message, etc.
 
 If we take a look at your Git directory you can see there are more objects now. These are the tree and commit objects you just created:
 

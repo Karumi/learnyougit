@@ -4,7 +4,7 @@
 
 We've learned how to get other peoples changes with git fetch. It's time to share with them your own work using `git push`. This command will send your changes to a Git server for others to see.
 
-First things first, you won't be able to push to the remote you added previously. That is because `https://github.com/karumi/learnyougit` have restricted write access; only us, the karumies, can upload stuff there. In order to learn how the push command works and pass this lesson, you will need to fork that repository. In short, forking a repository means creating a clone of that repository entirely under your control. That means you will have access to freely push your changes!
+First things first, you won't be able to push to the remote you added previously. That is because `https://github.com/karumi/learnyougit` have restricted write access; only us, the karumies, can upload stuff there. In order to learn how the push command works and pass this lesson, you will need to fork that repository. In short, forking a repository means creating a copy of that repository under your control where you will have access to freely push your changes!
 
 To fork a repository you can follow the official GitHub guide: `https://help.github.com/articles/fork-a-repo/`. Once you successfully forked the `learnyougit` repository, add it to your remotes with `git remote add my-fork git@github.com:{your-user}/learnyougit.git` and you are ready to go! Let's continue with the lesson.
 

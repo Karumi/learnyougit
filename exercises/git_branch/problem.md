@@ -44,9 +44,9 @@ Think as a branch as just a name for a specific history timeline. When you creat
                                       +-----------+
 ```
 
-There is one thing you might be asking yourself right now. You still have not created a branch, yet, you've been able to commit with no issues, how is that possible? Basically, Git creates a branch by default in every new repository called `master`. It's in master history where you have tracking changes so far.
+There is one thing you might be asking yourself right now. You still have not created a branch, yet, you've been able to commit with no issues, how is that possible? Basically, Git creates a branch by default in every new repository called `master`. It's in master history where you have been tracking changes so far.
 
-It's also important to keep in mind that even though we learned how to create new branches, we are still stuck in master and every commit we create will be in that branch. That's because we still don't know how to tell Git what our current branch is. In the next lesson, we will learn how to do exactly that.
+It's also important to keep in mind that, even though we learned how to create new branches, we are still stuck in master and every commit we create will be in that branch. That's because we still don't know how to tell Git what our current branch is. In the next lesson, we will learn how to do exactly that.
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 

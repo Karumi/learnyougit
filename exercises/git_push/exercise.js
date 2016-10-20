@@ -17,7 +17,7 @@ exercise.addProcessor(function (mode, callback) {
             throw new Error('There are no remotes different from origin in this repository')
         }
 
-        return _repository.getRemote(remotes[0])
+        return _repository.getRemote('my-fork')
     }).then(remote => {
         if (remote.url().endsWith('Karumi/learnyougit.git')) {
             throw new Error('The ' + remote.name() + ' remote is not pointing to a learnyougit fork')

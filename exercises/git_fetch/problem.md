@@ -2,7 +2,7 @@
 
 ## Description
 
-Now that you are able to create your own repositories, commit and create branches and tags, you must be willing to share your work with others. This is where remotes comes into play. A remote is just a URL where you can upload your work and download others work. You can have as many remotes as you want and give them names.
+Now that you are able to create your own repositories, commit and create branches and tags, you must be willing to share your work with others. This is where remotes comes into play. A remote is just a URL where you can upload your work and download others work. You can have as many remotes as you want and even give them names.
 
 In order to add a new remote to your repository you'll need to execute `git remote add {remote-name} {remote-url}`, for example, `git remote add origin git@github.com:Karumi/learnyougit.git`. `origin` is a special remote name, it's the one Git uses by default when loading a repository directly from a remote with `git clone`. There are other `git remote` operations like `remove`, `rename` or `prune`. You can check what do they do by typing `git remote --help`.
 

@@ -4,14 +4,14 @@
 
 We need to make a stop in the road to explain one of the most useful tools in Git, that is, `git reset`. Generally speaking, this tool lets you take files from one commit or branch and bring them to your working directory.
 
-There is a lot to say about `git reset`, if you feel like learning how does it work go directly to the `Internals` section. If not, here are some useful examples of how git reset can be used.
+There is a lot to say about `git reset`, if you feel like learning how it works, go directly to the `Internals` section. If not, here are some useful examples of how git reset can be used.
 
 `git reset HEAD` "Unstages" changes. It can be seen as the opposite operation of `git add`.
 `git reset --hard HEAD` Cleans up all your current work, staged or not (Be careful, this means you won't be able to recover your changes).
 `git reset --soft HEAD~` Moves your branch to the previous commit. All the changes in the current commit will be "moved" to the staging area.
 `git reset --hard {commit|branch}` Moves your current branch to point to the specified commit or branch. Cleans your current changes.
 
-Just a quick note on the `HEAD` notation we used. Besides using branch names and commit hashes, Git can also resolve commits by moving relatively to other commits. `HEAD` means the commit our current branch is pointing to. The `~` modifier is telling Git to use the parent commit of whatever is suffixing, `HEAD~` is the parent of the commit pointed by HEAD but we can also use `master~` or even `5628cd3~`. You use the `~` operator as many times you want, this is a valid commit `HEAD~~~~~` but there is a shorter way of writing that which is `HEAD~5`. There are several other ways of referencing commits, you can find more details in https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection
+Just a quick note on the `HEAD` notation we used. Besides using branch names and commit hashes, Git can also resolve commits by moving relatively to other commits. `HEAD` means the commit our current branch is pointing to. The `~` modifier is telling Git to use the parent commit of whatever is suffixing, `HEAD~` is the parent of the commit pointed by HEAD but we can also use `master~` or even `5628cd3~`. You can use the `~` operator as many times as you want. For example, this is a valid commit `HEAD~~~~~`. However there is a shorter way of writing that: `HEAD~5`. There are several other ways of referencing commits, you can find more details in https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
@@ -19,7 +19,7 @@ Just a quick note on the `HEAD` notation we used. Besides using branch names and
 
 We already learnt how Git has a special place for every change that is about to be committed: the index or the staging area. Besides that, Git also handles two more places, sort of speak. One is the working directory area, that corresponds with all the files living in your filesystem. The last one is whatever your HEAD pointer is pointing to.
 
-All your git commands modify at least one of the three areas in one way or another. We can see how they evolve when doing regular work.
+All your git commands use or modify at least one of the three areas in one way or another. We can see how they evolve when doing regular work.
 
 {green}> touch new.txt{/green}
 ```
@@ -51,7 +51,7 @@ All your git commands modify at least one of the three areas in one way or anoth
 
 What does `git reset` have to do with all this? It basically is the tool that lets you modify your repository areas as you wish.
 
-Reset can be thought as a three steps process. Each step affecting one of the three described areas. Imagine we start with the following state:
+Reset can be thought as a three-steps process. Each step affecting one of the three described areas. Imagine we start with the following state:
 
 ```
                      +------+
@@ -133,7 +133,7 @@ Finally, it makes your working directory looks exactly like the specified commit
 +-----------+---------+---------+
 ```
 
-In which step the reset command stops is up to you and is configurable. `--soft` Stops after executing step 1, `--mixed` (or nothing) stops after executing step 2, `--hard` executes the three steps.
+In which step the reset command stops is up to you and is configurable. `--soft` Stops after executing step 1, `--mixed` (or nothing, being the default option) stops after executing step 2, `--hard` executes the three steps.
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
