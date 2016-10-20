@@ -1,15 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Rebase two branches and solve the conflict by adding a new different line:
-```
-git checkout rebase-lesson/base-branch
-git rebase rebase-lesson/onto-branch
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 We already reviewed how to use the `merge` tool, it's now time to learn how to use its companion, the `rebase` command! The main goal of `git rebase` is to unify branches keeping a linear history, that means that Git won't create commits with two parents. Git users often find this desirable because, in this way, it's easier to navigate through your commits history to find bugs, revert changes and so.
@@ -78,7 +68,7 @@ Just as we could have conflicts while using `git merge`, there can also be confl
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 Git rebase is a really powerful tool. Besides applying the algorithm explained previously, it can be used to edit your history when used with the `--interactive` option. When that happens, Git will save all the commits that are going to be rebased as usual, but then it will stop and let you edit what to do with all those commits.
 
@@ -110,5 +100,15 @@ pick e1e3cf0 Most recent commit
 ```
 
 Once you have finished editing what to do with every commit save the file and Git will proceed with the rebase process, respecting your configuration.
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Rebase two branches and solve the conflict by adding a new different line:
+```
+git checkout rebase-lesson/base-branch
+git rebase rebase-lesson/onto-branch
+```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

@@ -1,19 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Link your local repository to the learnyougit repository
-```
-git remote add {remote-name} git@github.com:Karumi/learnyougit.git
-```
-
-Download all the remote information
-```
-git fetch {remote-name}
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 Now that you are able to create your own repositories, commit and create branches and tags, you must be willing to share your work with others. This is where remotes comes into play. A remote is just a URL where you can upload your work and download others work. You can have as many remotes as you want and give them names.
@@ -28,7 +14,7 @@ In the following lesson we will learn how to upload your changes to a remote.
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 Remotes information is stored in the `config` file
 
@@ -72,5 +58,19 @@ There is an easier way to see all the information stored for a remote:
 ```
 
 Besides the URLs used to download and upload information, Git also links local branches with remote ones. It does that so that remote-related calls like `git pull` and `git push` (that we will see in later lessons) can be automatically executed without specifying which remote branches are being updated.
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Link your local repository to the learnyougit repository
+```
+git remote add {remote-name} git@github.com:Karumi/learnyougit.git
+```
+
+Download all the remote information
+```
+git fetch {remote-name}
+```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

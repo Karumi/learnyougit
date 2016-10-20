@@ -1,14 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Add a new file to your newly created Git repository with the command
-```
-git add {filename}
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 Right now your repository isn't tracking anything at all. Let's change that by adding a single file.
@@ -19,7 +10,7 @@ Now we need to tell Git that we want to add that file to our repository by typin
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 When the command `git add` is executed, Git creates a `blob` object, which is nothing but the contents of the tracked file conveniently compressed. The path to this blob object is defined by the SHA1 of the contents of the file.
 
@@ -57,4 +48,14 @@ There is also a new `objects` directory. All Git objects follow the same naming 
 
   Hello git-workshopper
 ```
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Add a new file to your newly created Git repository with the command
+```
+git add {filename}
+```
+
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

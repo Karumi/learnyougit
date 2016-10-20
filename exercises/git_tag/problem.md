@@ -1,14 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Create a new tag using the command
-```
-git tag {tag-name}
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 Git branches are updated when creating commits, but sometimes, we want to store a reference to a very specific version of our files and keep it there. Tags are the solution to that problem. Like branches, tags are also a pointer to a commit but they are not updated when creating new snapshots.
@@ -17,7 +8,7 @@ There are two types of tags, `lightweight` and `annotated`. The key difference b
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 Inside Git, tags are just another type of reference:
 
@@ -64,6 +55,15 @@ In the case of annotated tags, they hold a reference to a new `tag` object. Is i
   committer Sergio Gutierrez <sergio@gokarumi.com> 1470482062 +0200
 
     This is a commit
+```
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Create a new tag using the command
+```
+git tag {tag-name}
 ```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

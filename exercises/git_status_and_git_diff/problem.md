@@ -1,11 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-No task for this lesson. You can go to the next lesson by simply running `git-workshopper verify`.
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 So far, we've been doing lots of changes in our file history but we have no way of knowing, for example, which files are in staging. This is where `git status` and `git diff` come into play.
@@ -46,10 +40,16 @@ Lines starting with the `-` symbol are lines that have been removed whereas line
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 These two tools work with the same trees we studied in the previous lesson: `working directory`, `index` and `HEAD`. What we see when running any of the two commands are the differences between those trees. Staged changes are the ones present in the `index` tree but not in `HEAD`. Unstaged changes are the ones present in the `working directory` but not in the `index`.
 
 Keep in mind that we are talking about "changes" and not files. That's intentional, we can add some changes in a file to staging and, afterwards, modify it even more. In that case, a file can appear in the two first sections of the `git status` output. What Git is trying to tell us is that there are some changes in that file that are staged and others than don't.
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+No task for this lesson. You can go to the next lesson by simply running `git-workshopper verify`.
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

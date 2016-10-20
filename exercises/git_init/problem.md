@@ -1,14 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Create a new Git repository with the command
-```
-git init
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 To start using Git you first need to create a new repository.
@@ -19,7 +10,7 @@ There are several ways of creating a repository, we will use the simplest one th
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 When we run `git init`, Git creates a folder in your current directory called `.git`. This folder stores, among other things:
 * All the files contents tracked by Git (including all the different versions of the same file)
@@ -35,5 +26,14 @@ You can take a look to all the things Git created for you, we will see what most
     └── refs
         ├── heads
         └── tags{/grey}
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Create a new Git repository with the command
+```
+git init
+```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

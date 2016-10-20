@@ -1,21 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Merge two branches where fast-forward can be applied:
-```
-git checkout merge-lesson/base-branch
-git merge merge-lesson/fast-forward-branch
-```
-
-Merge two branches with conflicts and solve them taking all the changes from the conflicts-branch:
-```
-git checkout merge-lesson/base-branch
-git merge merge-lesson/conflicts-branch
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 In a previous lesson we learned how to upload your changes and we talked about how your work can have conflicts with others work. The main tool that lets you solve this kind of situations is `git merge`. In essence, the merge command just unifies two branches history into one:
@@ -151,12 +135,29 @@ Congratulations, now you know how to collaborate with others more efficiently! T
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 How the merge tool works can be summarized in the following rules:
 1. If one of the branches is subhistory of the other (that means that all commits of one of the two branches are in the other branch as well):
   * Apply `fast-forward`. If your current branch is the one behind, Git will only move it forwards to point to the same commit the merged branch is pointing to. If your current branch already contains all the other branch commits, then Git doesn't modify your branch.
 2. Else:
   * Create a new commit with two parents, your current branch and the branch being merged.
+
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Merge two branches where fast-forward can be applied:
+```
+git checkout merge-lesson/base-branch
+git merge merge-lesson/fast-forward-branch
+```
+
+Merge two branches with conflicts and solve them taking all the changes from the conflicts-branch:
+```
+git checkout merge-lesson/base-branch
+git merge merge-lesson/conflicts-branch
+```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

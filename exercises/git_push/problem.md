@@ -1,15 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Push your changes to your own forked repository
-```
-git remote add my-fork {fork-url}
-git push my-fork my-branch
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 We've learned how to get other peoples changes with git fetch. It's time to share with them your own work using `git push`. This command will send your changes to a Git server for others to see.
@@ -38,7 +28,7 @@ In the following lessons we will learn how to solve this kind of conflicts so th
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 When you push a branch, Git will compare which commits are already present in the remote and ignore them. There are two possibilities with the remaining commits:
 * All new commits are on top of the remote branch history, meaning you can safely push everything to make new changes visible to everyone.
@@ -116,5 +106,14 @@ When you push a branch, Git will compare which commits are already present in th
                  +--------------+
 ```
 
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Push your changes to your own forked repository
+```
+git remote add my-fork {fork-url}
+git push my-fork my-branch
+```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

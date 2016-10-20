@@ -1,23 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Create a new commit in your current branch with
-
-`touch {some-file}`
-`git add {some-file}`
-`git commit -m "Add a brand new file"`
-
-Then move to the `master` branch
-
-`git checkout master`
-
-Reset `master` to point to the new commit
-
-`git reset --hard {branch-name}`
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 We need to make a stop in the road to explain one of the most useful tools in Git, that is, `git reset`. Generally speaking, this tool lets you take files from one commit or branch and bring them to your working directory.
@@ -33,7 +15,7 @@ Just a quick note on the `HEAD` notation we used. Besides using branch names and
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 We already learnt how Git has a special place for every change that is about to be committed: the index or the staging area. Besides that, Git also handles two more places, sort of speak. One is the working directory area, that corresponds with all the files living in your filesystem. The last one is whatever your HEAD pointer is pointing to.
 
@@ -172,5 +154,23 @@ In this case, the `--mixed` option is used because is the default configuration.
     [1] Git will move your current branch to point to the specified commit.
     [2] It will then update your staging area to look exactly as the selected commit.
     [3] Finally, it will make your working directory exactly as it is in the commit.
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Create a new commit in your current branch with
+
+`touch {some-file}`
+`git add {some-file}`
+`git commit -m "Add a brand new file"`
+
+Then move to the `master` branch
+
+`git checkout master`
+
+Reset `master` to point to the new commit
+
+`git reset --hard {branch-name}`
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

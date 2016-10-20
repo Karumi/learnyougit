@@ -1,14 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Commit your staged files with the command
-```
-git commit -m {message}
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 Now that you have, at least, one file ready to be tracked, we can tell Git to create a snapshot. This means that we are going to store the state of all tracked files at this moment. To do that we use the command `git commit`.
@@ -30,7 +21,7 @@ You can create as many commits as you want, every commit will always keep a refe
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 To store the tracked files, Git builds `tree` and `commit` objects. Tree objects are a like directories, they store names, permissions and pointers to other objects, be it blobs or other trees. In the other hand, commit objects store a pointer to a tree and all the metadata related to the snapshot, that means, committer name, creation timestamp, message, etc.
 
@@ -90,6 +81,15 @@ When we create more and more commits we start creating a linear history of your 
   +---------+        +---------+             |
   | BLOB #1 |        | BLOB #2 |<------------+
   +---------+        +---------+
+```
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Commit your staged files with the command
+```
+git commit -m {message}
 ```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

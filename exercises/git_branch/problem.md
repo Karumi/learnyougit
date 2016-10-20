@@ -1,14 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Create a new branch using the command
-```
-git branch {branch-name}
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 Branches are the way Git has to handle different timelines in your files. As we just saw in the previous lesson, commits always keep a reference to its parent commit. That means we keep a linear history of our files. With branches we can have multiple of those histories.
@@ -59,7 +50,7 @@ It's also important to keep in mind that even though we learned how to create ne
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 Branches are represented by plain text files in your Git directory:
 
@@ -84,5 +75,14 @@ The `heads` directory contains all your different branches. Each one only having
 ```
 
 Branches are automatically updated by Git when you commit or perform any other branch-related operation.
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Create a new branch using the command
+```
+git branch {branch-name}
+```
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}

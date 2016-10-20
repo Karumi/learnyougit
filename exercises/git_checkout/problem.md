@@ -1,14 +1,5 @@
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Task
-
-Move to another branch using
-```
-git checkout {branch-name|commit}
-```
-
-{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
-
 ## Description
 
 Now that we know what branches are, we probably want to start moving between them. That's what `git checkout` is for. Try to move to your newly created branch adding its name to the end of the command: `git checkout {branch-name}`.
@@ -116,7 +107,7 @@ Git also lets you move to specific commits by using their hash (or partial hash 
 
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
 
-## Internals
+## In-depth
 
 As we saw, Git keeps track of your current branch with a pointer called `HEAD`. This pointer is nothing but a file with the same name.
 
@@ -146,4 +137,14 @@ If your HEAD is pointing to a commit, it will contain its hash instead:
 
   d57d319c4057b02c8095c2e7c7daedc9c6194f93
 ```
+
+{cyan}──────────────────────────────────────────────────────────────────────{/cyan}
+
+## Task
+
+Move to another branch using
+```
+git checkout {branch-name|commit}
+```
+
 {cyan}──────────────────────────────────────────────────────────────────────{/cyan}
