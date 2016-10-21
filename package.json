@@ -9,6 +9,7 @@
   "bin": "./learnyougit.js",
   "dependencies": {
     "workshopper": "2.7.0",
+    "workshopper-exercise": "2.7.0",
     "nodegit": "0.16.0",
     "chalk": "1.1.3"
   }
